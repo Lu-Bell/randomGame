@@ -6,7 +6,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 class Ball extends JComponent implements ActionListener, MouseListener{
-    Timer tm = new Timer(2, this); //sets time for when we want the object to be repainted, ex. every 2 miliseconds the object is repainted
+    Timer tm = new Timer(1, this); //sets time for when we want the object to be repainted, ex. every 2 miliseconds the object is repainted
     int x = 0, velX = 2; //variable x is for the position, velX is the the velocity of the object
 
     public static void main(String[] args) {
@@ -16,6 +16,7 @@ class Ball extends JComponent implements ActionListener, MouseListener{
         frame.setLocationRelativeTo(null);
         frame.add(new Ball());
         frame.setVisible(true);
+        frame.getContentPane().setBackground(new Color(123, 50, 250));
     }
 
     //This class paints the object , the timer is called in this class to set the timer for when we want the object repainted.
